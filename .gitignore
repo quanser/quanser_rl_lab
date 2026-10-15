@@ -1,0 +1,48 @@
+# USD assets are tracked via Git LFS (see .gitattributes).
+# **/*.usd
+# **/*.usda
+# **/*.usdc
+# **/*.usdz
+
+# Python
+**/__pycache__/
+**/*.pyc
+**/*.egg-info/
+.DS_Store
+
+# Tool caches. Both tools also write a self-ignoring .gitignore inside these,
+# so this is belt-and-braces rather than strictly required.
+**/.pytest_cache/
+**/.ruff_cache/
+
+# Build artefacts
+**/build*/
+**/*.so
+
+# Isaac Sim / Omniverse
+_isaac_sim*
+_build
+_repo
+**/*.dmp
+**/.thumbs
+
+# IDE
+**/.idea/
+**/.vscode/
+# Keep the top-level .vscode, which carries shared editor settings
+!.vscode
+
+# Training and run artefacts
+**/logs/*
+**/runs/*
+**/outputs/*
+**/videos/*
+**/recordings/*
+**/wandb/*
+**/*.log*
+*.csv
+*.tmp
+nohup.out
+
+# Doc build output
+**/docs/_build/*

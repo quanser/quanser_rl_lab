@@ -1,0 +1,31 @@
+[package]
+
+# Semantic Versioning is used: https://semver.org/
+version = "0.1.0"
+
+# Description
+category = "isaaclab"
+
+title = "Quanser RL Lab"
+author = "Quanser Consulting Inc."
+maintainer = "Quanser Consulting Inc."
+# RELEASE-BLOCKER: a role address, not an individual's. Published in the
+# package metadata, so it must be one Quanser is willing to receive mail at.
+author_email = "tech@quanser.com"
+description = "Isaac Lab reinforcement-learning tasks for Quanser robots."
+repository = "https://github.com/quanser/quanser_rl_lab.git"
+keywords = ["isaaclab", "isaac-sim", "reinforcement-learning", "robotics", "quanser"]
+
+# Only the Isaac Lab extensions quanser_rl_lab imports. isaaclab_assets and
+# isaaclab_mimic were template entries and are not used.
+[dependencies]
+"isaaclab" = {}
+"isaaclab_rl" = {}
+"isaaclab_tasks" = {}
+
+[[python.module]]
+name = "quanser_rl_lab"
+
+# No apt dependencies and no ROS workspace: everything this task needs comes
+# from Isaac Lab and the pip requirements in setup.py.
+[isaac_lab_settings]
