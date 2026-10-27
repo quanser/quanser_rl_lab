@@ -29,6 +29,14 @@ python scripts/rsl_rl/play.py --task Quanser-QBot-Mapless-Nav-Play-v0 --load_run
 Any config field can be overridden on the command line, e.g.
 `env.num_obstacles=4` or `env.arena_width=6.0`.
 
+A trained policy is attached to the [`v0.1.0` release][rel] as `policy.zip`.
+Extract it at the root of the repository so its run directory lands under
+`logs/rsl_rl/qbot_mapless_nav/`, then pass that directory's name to
+`--load_run`. With no `--checkpoint`, `play.py` loads the newest checkpoint in
+it.
+
+[rel]: https://github.com/quanser/quanser_rl_lab/releases/tag/v0.1.0
+
 Use the `-Play-v0` id for both evaluation and export. The obstacle curriculum
 advances only during training and its level is not stored in the checkpoint,
 so the training id would replay a 9-cone policy at the 2-cone starting level.
