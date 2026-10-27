@@ -11,6 +11,7 @@ Isaac Lab reinforcement-learning tasks for Quanser robots, trained with
 | Task | Robot | Environment ids |
 |---|---|---|
 | [Mapless navigation](docs/qbot_mapless_nav/README.md) | QBot Platform | `Quanser-QBot-Mapless-Nav-v0`, `Quanser-QBot-Mapless-Nav-Play-v0` |
+| [End-effector reach](docs/qarm_research_reach/README.md) | QArm Research | `Quanser-QArmResearch-Reach-v0`, `Quanser-QArmResearch-Reach-Play-v0` |
 
 ## Install
 
@@ -75,6 +76,7 @@ source/quanser_rl_lab/
     assets/                       ArticulationCfgs and USD path constants
     models/                       policy models and action distributions (loaded by name)
     tasks/direct/<task>/          env, env cfg and the rsl_rl PPO cfg
+    tasks/manager_based/<task>/   env cfg, task mdp terms and the rsl_rl PPO cfg
 ```
 
 ## Licence

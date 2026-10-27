@@ -1,5 +1,32 @@
 # Changelog
 
+## 0.1.1 (2026-10-27)
+
+Adds the QArm Research reach task.
+
+### Added
+
+- `Quanser-QArmResearch-Reach-v0` — QArm Research end-effector reach: drive `link6` 
+  to a commanded 6-DOF pose, sampled from pre-defined zones, under joint position 
+  control. See [docs/qarm_research_reach/README.md](docs/qarm_research_reach/README.md).
+- `Quanser-QArmResearch-Reach-Play-v0` — the same task with observation noise
+  disabled and a smaller scene, for evaluation and export.
+- `source/quanser_rl_lab/data/robots/QArmResearch/qarm_research.usd` — the
+  QArm Research robot description, tracked in Git LFS. Adapted from ROBOTIS's
+  `cyclo_lab` under Apache-2.0. See [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md).
+- `quanser_rl_lab.assets.qarm_research` — the articulation config and a
+  `verify_usd_available()` guard that fails early on an unfetched Git LFS pointer.
+- `TwoZoneUniformPoseCommand` — a pose command that picks one of two zones per
+  resample, so each zone keeps its own orientation band.
+- `tests/test_qarm_research_reach.py` — observation layout, two-zone goal sampling 
+  and the `-Play-v0` noise setting.
+
+### Notes
+
+- Intended as a starting point for working with the QArm Research. The reward 
+  terms, goal zones and PPO hyperparameters are a baseline to build on rather 
+  than a finished design.
+
 ## 0.1.0 (2026-10-15)
 
 Initial release.
